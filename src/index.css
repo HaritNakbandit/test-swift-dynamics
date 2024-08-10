@@ -11,3 +11,76 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.triangle-up {
+	width: 0;
+	height: 0;
+	border-left: 60px solid transparent;
+	border-right: 60px solid transparent;
+	border-bottom: 120px solid #555;
+}
+
+.triangle-down {
+	width: 0;
+	height: 0;
+	border-left: 60px solid transparent;
+	border-right: 60px solid transparent;
+	border-top: 120px solid #555;
+}
+
+.triangle-left {
+	width: 0;
+	height: 0;
+	border-top: 60px solid transparent;
+	border-right: 120px solid #555;
+	border-bottom: 60px solid transparent;
+}
+
+.triangle-right {
+	width: 0;
+	height: 0;
+	border-top: 60px solid transparent;
+	border-left: 120px solid #555;
+	border-bottom: 60px solid transparent;
+}
+
+.square {
+  height: 120px;
+  width: 120px;
+  background-color: #555;
+}
+
+.circle {
+  height: 120px;
+  width: 120px;
+  background-color: #555;
+  border-radius: 50%;
+}
+
+.oval {
+  height: 120px;
+  width: 240px;
+  background-color: #555;
+  border-radius: 50%;
+}
+
+.trapezoid {
+	border-bottom: 120px solid #555;
+	border-left: 40px solid transparent;
+	border-right: 40px solid transparent;
+	height: 0;
+	width: 240px;
+}
+
+.rectangle {
+  height: 120px;
+  width: 240px;
+  background-color: #555;
+}
+
+.parallelogram {
+	height: 120px;
+	width: 240px;
+	transform: skew(20deg);
+	background: #555;
+}
