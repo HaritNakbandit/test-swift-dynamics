@@ -18,7 +18,6 @@ const { Header, Content } = Layout;
 const PageLayout = (props: Props) => {
   const { children, title } = props;
   const { t } = useTranslation("main");
-  const headerBarHeight = 64;
 
   const handleChange = (value: string) => {
     i18n.changeLanguage(value);
@@ -26,33 +25,33 @@ const PageLayout = (props: Props) => {
 
   return (
     <LayoutStyle>
-      <Header
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          backgroundColor: "transparent",
-          padding: "0 20px",
-        }}
-      >
-        <Title title={title ?? ""} level={1} />
-        <Select
-          value={i18n.language}
-          style={{ width: 80 }}
-          onChange={handleChange}
-          options={[
-            { value: "en", label: t("en") },
-            { value: "th", label: t("th") },
-          ]}
-        />
-      </Header>
       <Content
         style={{
-          height: `calc(100vh - ${headerBarHeight}px)`,
+          height: `calc(100vh`,
           overflow: "auto",
           overflowY: "scroll",
         }}
       >
+        <Header
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            backgroundColor: "transparent",
+            padding: "0 20px",
+          }}
+        >
+          <Title title={title ?? ""} level={1} />
+          <Select
+            value={i18n.language}
+            style={{ width: 80 }}
+            onChange={handleChange}
+            options={[
+              { value: "en", label: t("en") },
+              { value: "th", label: t("th") },
+            ]}
+          />
+        </Header>
         {children}
       </Content>
     </LayoutStyle>

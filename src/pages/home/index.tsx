@@ -18,7 +18,7 @@ const HomePage = () => {
         gap={"small"}
         justify={"center"}
         align="center"
-        style={{ height: "100%" }}
+        style={{ height: `calc(100% - 64px)` }}
       >
         <Card
           title={t("test_1_title")}
